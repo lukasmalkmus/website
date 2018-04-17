@@ -15,7 +15,7 @@
 ### Introduction
 
 These are the source files of the [Frankfurt Developers Community] website which
-are built using [Hugo].
+is built using [Hugo].
 
 ### License
 
