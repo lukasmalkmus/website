@@ -1,0 +1,14 @@
+install:
+  - curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "browser_download_url.*_Linux-64bit.tar.gz" | cut -d '"' -f 4 | xargs curl -JL | tar xz
+  - mv hugo /usr/local/bin/
+
+script:
+  - hugo
+
+deploy:
+  provider: pages
+  repo: lukasmalkmus/website
+  target_branch: gh-pages  
+  local-dir: public
+  email: "noreply@travis-ci.org"
+  name: "Travis CI"

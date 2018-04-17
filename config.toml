@@ -1,10 +1,10 @@
-baseURL = "http://localhost:1313"
+baseurl = "http://fradev.de/"
+title = "#FRADEV"
 languageCode = "en-us"
-title = "FraDev"
 theme = "vec"
+paginate = 10
 
 [menu]
-  # Shown in the side menu.
   [[menu.main]]
     name = "chat"
     weight = 0
@@ -16,13 +16,14 @@ theme = "vec"
   [[menu.main]]
     name = "devs"
     weight = 2
-    url = "https://github.com/fradevhq/freelancers"
+    url = "/devs"
 
 [params]
+  Keywords = "frankfurt,ffm,dev,developers"
+  Description = "The Frankfurt Developers Community landing page"
   Avatar = "img/avatar.jpg"
-  Description = "Frankfurt Entwickler Community"
-  DescriptionEn = "Frankfurt Developers Community"
-  SelfIntro = "Willkommen zu FraDev"
-  SelfIntroEn = "Welcome FraDev"
-  Services = "Slack, Meetups, Jobs & Code"
+  SelfIntro = "Welcome to the Frankfurt Developers Community"
+  SubText = "Slack, Meetups, Jobs & Cod"
   Email = "hello@fradev.de"
+
+  GithubID = "fradevhq"
