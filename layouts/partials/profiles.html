@@ -1,0 +1,21 @@
+<section class="container list">
+    <h1 class="title">{{ .Title }}</h1>
+    <ul>
+      {{ $urlPre := "https://api.github.com" }}
+      {{ $profiles := getJSON $urlPre "/repos/fradevhq/freelancers/contents/profiles" }}
+      {{ range $profiles }}
+        {{ $profile := getJSON .download_url }}
+        <li>
+          {{ with $profile }}
+            <a href="mailto:{{ .email }}">{{ .name }}</a><span>{{ .title }}</span>
+            {{ with .profiles }}
+              {{ if ne .github "" }}&middot; <a href="{{ .github }}">Github</a>{{ end }}
+              {{ if ne .twitter "" }}&middot; <a href="{{ .twitter }}">Twitter</a>{{ end }}
+              {{ if ne .linkedin "" }}&middot; <a href="{{ .linkedin }}">LinkedIn</a>{{ end }}
+            {{ end }}
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" . }}
+  </section>

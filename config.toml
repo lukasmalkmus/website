@@ -1,29 +1,33 @@
 baseurl = "http://fradev.de/"
 title = "#FRADEV"
+theme = "coder"
+
 languageCode = "en-us"
-theme = "vec"
+
 paginate = 10
+canonifyurls = true
+
+[params]
+    author = "Frankfurt Developers Community"
+    description = "The Frankfurt Developers Community landing page"
+    keywords = "frankfurt,ffm,dev,developers"
+    info = "Slack, Meetups, Jobs & Code"
+
+[[params.social]]
+    name = "Github"
+    weight = 1
+    url = "https://github.com/fradevhq/"
 
 [menu]
   [[menu.main]]
-    name = "chat"
-    weight = 0
+    name = "Chat"
+    weight = 1
     url = "https://fradev.herokuapp.com/"
   [[menu.main]]
-    name = "jobs"
-    weight = 1
+    name = "Jobs"
+    weight = 2
     url = "https://fradevjobs.de"
   [[menu.main]]
-    name = "devs"
-    weight = 2
+    name = "Devs"
+    weight = 3
     url = "/devs"
-
-[params]
-  Keywords = "frankfurt,ffm,dev,developers"
-  Description = "The Frankfurt Developers Community landing page"
-  Avatar = "img/avatar.jpg"
-  SelfIntro = "Welcome to the Frankfurt Developers Community"
-  SubText = "Slack, Meetups, Jobs & Cod"
-  Email = "hello@fradev.de"
-
-  GithubID = "fradevhq"
