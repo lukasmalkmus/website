@@ -1,6 +1,10 @@
+language: go
+
+go:
+  - 1.x
+
 install:
-  - curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "browser_download_url.*_Linux-64bit.tar.gz" | cut -d '"' -f 4 | xargs curl -JL | tar xz
-  - mv hugo /usr/local/bin/
+  - go get -u github.com/spf13/hugo
 
 script:
   - hugo
