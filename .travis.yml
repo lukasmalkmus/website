@@ -16,3 +16,6 @@ deploy:
   local-dir: public
   email: "noreply@travis-ci.org"
   name: "Travis CI"
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
