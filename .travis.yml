@@ -8,14 +8,3 @@ install:
 
 script:
   - hugo
-
-deploy:
-  provider: pages
-  repo: lukasmalkmus/website
-  target_branch: gh-pages  
-  local-dir: public
-  email: "noreply@travis-ci.org"
-  name: "Travis CI"
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
